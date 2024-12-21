@@ -15,7 +15,3 @@ INSERT INTO school_of_it_2025.rentals (rental_id, customer_name, activity, renta
 (5, 'Michael', 'Skiing', '2024-01-02'),
 (6, 'Michael', 'Snowtubing', '2024-01-02');
 
-select 
-customer_name,count(*) distinct_activites 
-from school_of_it_2025.rentals
-group by customer_name having count(distinct activity) > 1
