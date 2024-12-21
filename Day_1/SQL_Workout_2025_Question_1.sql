@@ -1,11 +1,13 @@
-CREATE TABLE rentals (
+CREATE SCHEMA IF NOT EXISTS school_of_it_2025;
+
+CREATE TABLE school_of_it_2025.rentals (
     rental_id INT PRIMARY KEY,
     customer_name VARCHAR(50),
     activity VARCHAR(50),
     rental_date DATE
 );
 
-INSERT INTO rentals (rental_id, customer_name, activity, rental_date) VALUES
+INSERT INTO school_of_it_2025.rentals (rental_id, customer_name, activity, rental_date) VALUES
 (1, 'Emily', 'Skiing', '2024-01-01'),
 (2, 'Michael', 'Snowboarding', '2024-01-02'),
 (3, 'Emily', 'Snowboarding', '2024-01-03'),
@@ -15,5 +17,5 @@ INSERT INTO rentals (rental_id, customer_name, activity, rental_date) VALUES
 
 select 
 customer_name,count(*) distinct_activites 
-from rentals
+from school_of_it_2025.rentals
 group by customer_name having count(distinct activity) > 1
