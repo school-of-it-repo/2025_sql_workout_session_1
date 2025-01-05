@@ -59,3 +59,8 @@ GROUP  BY sg.globe_id,
 ORDER  BY 3 DESC
 LIMIT  10 ;
 
+
+/*
+
+*/
+
